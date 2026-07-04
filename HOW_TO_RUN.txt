@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════
+  SARMAN LUXURY — LOCAL SETUP GUIDE
+═══════════════════════════════════════════════════
+
+FOLDER STRUCTURE:
+  SarmanLuxury_Complete/
+  ├── backend/        ← Node.js + Express API
+  └── SarmanLuxury/  ← React (Vite) Frontend
+
+─── STEP 1: Run the Backend ────────────────────────
+
+  Open Terminal 1:
+
+    cd backend
+    npm install
+    npm start
+
+  Backend runs at: http://localhost:5000
+  You should see: "MongoDB Connected" and "Server Running On Port 5000"
+
+─── STEP 2: Run the Frontend ───────────────────────
+
+  Open Terminal 2:
+
+    cd SarmanLuxury
+    npm install
+    npm run dev
+
+  Frontend runs at: http://localhost:5173
+
+─── WHAT WAS CHANGED ───────────────────────────────
+
+  ✅ BUG FIX   — Admin can no longer set role to "superadmin"
+                 (only superadmin can assign superadmin role)
+
+  ✅ FEATURE   — Testimonials carousel section on homepage
+                 (visible under Featured Products)
+
+  ✅ FEATURE   — Superadmin can manage testimonials from Admin panel
+                 → TESTIMONIALS tab (superadmin only)
+                 → Add / Edit / Hide / Delete testimonials
+
+  ✅ LOCALHOST — axios baseURL set to http://localhost:5000/api
+                 vite.config.js has API proxy configured
+
+─── NOTES ──────────────────────────────────────────
+
+  • MongoDB is still the cloud Atlas database (no local DB needed)
+  • Cloudinary and Razorpay credentials are in backend/.env
+  • To go back to production, change axios.js baseURL back to
+    your Render URL: https://sarmanluxury-api-9oz3.onrender.com/api
+
+═══════════════════════════════════════════════════

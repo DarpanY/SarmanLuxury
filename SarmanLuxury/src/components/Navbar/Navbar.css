@@ -1,0 +1,458 @@
+/* TOP BAR */
+
+.top-bar{
+
+  width:100%;
+  height:40px;
+
+  background:#000;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  z-index:9999;
+
+}
+
+.top-bar p{
+
+  color:white;
+
+  font-size:12px;
+
+  letter-spacing:2px;
+
+}
+
+/* NAVBAR */
+
+.navbar{
+
+  width:100%;
+  height:90px;
+
+  background:#03110d;
+
+  border-bottom:
+  1px solid rgba(200,164,93,0.1);
+
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 70px;
+
+  position:fixed;
+
+  top:40px;
+  left:0;
+
+  z-index:9998;
+
+}
+
+/* LOGO */
+
+.logo img{
+
+  width:170px;
+
+}
+
+/* LINKS */
+
+.nav-links{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:35px;
+
+  list-style:none;
+
+}
+
+.nav-links a{
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:13px;
+
+  letter-spacing:2px;
+
+  transition:0.3s;
+
+  position:relative;
+
+  padding-bottom:8px;
+
+}
+
+/* GOLD TEXT */
+
+.nav-links a:hover{
+
+  color:var(--gold);
+
+}
+
+/* UNDERLINE */
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:0;
+
+  width:0%;
+  height:2px;
+
+  background:var(--gold);
+
+  transition:0.4s ease;
+
+}
+
+/* HOVER EFFECT */
+
+.nav-links a:hover::after{
+
+  width:100%;
+
+}
+
+/* RIGHT */
+
+.nav-icons{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:18px;
+
+}
+
+/* SEARCH */
+
+.search-container{
+
+  position:relative;
+
+}
+
+.search-box{
+
+  width:250px;
+  height:46px;
+
+  background:#071A14;
+
+  border:
+  1px solid rgba(200,164,93,0.1);
+
+  display:flex;
+
+  align-items:center;
+
+  padding:0 15px;
+
+}
+
+.search-box input{
+
+  flex:1;
+
+  background:none;
+
+  border:none;
+
+  outline:none;
+
+  color:white;
+
+}
+
+.search-box svg{
+
+  color:var(--gold);
+
+  font-size:18px;
+
+}
+
+/* RESULTS */
+
+.search-results{
+
+  position:absolute;
+
+  top:60px;
+  left:0;
+
+  width:100%;
+
+  background:#071A14;
+
+  border:
+  1px solid rgba(200,164,93,0.1);
+
+  max-height:400px;
+
+  overflow-y:auto;
+
+  z-index:999;
+
+}
+
+.search-item{
+
+  display:flex;
+
+  gap:15px;
+
+  padding:14px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.search-item:hover{
+
+  background:#0b241c;
+
+}
+
+.search-item img{
+
+  width:60px;
+  height:70px;
+
+  object-fit:cover;
+
+}
+
+.search-item h4{
+
+  color:white;
+
+  margin-bottom:8px;
+
+  font-size:14px;
+
+}
+
+.search-item p{
+
+  color:var(--gold);
+
+  font-size:14px;
+
+}
+
+/* ICONS */
+
+.auth,
+.nav-cart{
+
+  width:45px;
+  height:45px;
+
+  background:#071A14;
+
+  border:
+  1px solid rgba(200,164,93,0.1);
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+
+  transition:0.3s;
+
+}
+
+.auth:hover,
+.nav-cart:hover{
+
+  border-color:var(--gold);
+
+  color:var(--gold);
+
+}
+
+.nav-cart span{
+
+  position:absolute;
+
+  top:-8px;
+  right:-6px;
+
+  width:20px;
+  height:20px;
+
+  border-radius:50%;
+
+  background:var(--gold);
+
+  color:black;
+
+  font-size:11px;
+  font-weight:700;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+}
+
+/* MOBILE */
+
+.mobile-menu-icon{
+
+  display:none;
+
+  color:white;
+
+  font-size:24px;
+
+}
+
+.mobile-sidebar{
+
+  position:fixed;
+
+  top:0;
+  left:-100%;
+
+  width:300px;
+  height:100vh;
+
+  background:#071A14;
+
+  z-index:10000;
+
+  transition:0.4s;
+
+  padding:30px;
+
+}
+
+.mobile-sidebar.show-menu{
+
+  left:0;
+
+}
+
+.mobile-top{
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  margin-bottom:40px;
+
+}
+
+.mobile-top svg{
+
+  color:white;
+
+  font-size:28px;
+
+}
+
+.mobile-sidebar ul{
+
+  list-style:none;
+
+}
+
+.mobile-sidebar li{
+
+  margin-bottom:30px;
+
+}
+
+.mobile-sidebar a{
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:15px;
+
+  letter-spacing:2px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+  .search-box{
+
+    width:200px;
+
+  }
+
+}
+
+@media(max-width:1000px){
+
+  .nav-links{
+
+    display:none;
+
+  }
+
+  .mobile-menu-icon{
+
+    display:block;
+
+  }
+
+  .navbar{
+
+    padding:0 20px;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .search-box{
+
+    display:none;
+
+  }
+
+  .logo img{
+
+    width:130px;
+
+  }
+
+}
