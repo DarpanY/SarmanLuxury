@@ -2,7 +2,7 @@ import axios from "axios"
 import toast from "react-hot-toast"
 
 const API = axios.create({
-  baseURL: "https://sarmanluxury-api-9oz3.onrender.com/api"
+  baseURL: "https://sarmanluxury-api.com/api"
 })
 
 // Auto-logout on expired/invalid token
